@@ -1,0 +1,128 @@
+/* 楽曲のカバー画像 */
+.heading {
+    min-height: 130px;
+    clear: both;
+    .cvr {
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        border: 1px solid #ffffff;
+        background-color: aliceblue;
+        margin: 0 10px;
+        float: left;
+    }
+}
+#musiclist .cvr {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border: 1px solid #ffffff;
+    background-color: aliceblue;
+    margin-left: 10px;
+    float: left;
+}
+#registresult .suggestMusic .cvr {
+    background-size: cover;
+}
+#home_list .cvr {
+    background-size: cover;
+}
+.cvr {
+    /* μ's */
+    &.m0001 { background-image: url("../img/0010.png"); }
+    &.m0002 { background-image: url("../img/0020.png"); }
+    &.m0003 { background-image: url("../img/0030.png"); }
+    &.m0004 { background-image: url("../img/0040.png"); }
+    &.m0005 { background-image: url("../img/0050.png"); }
+    &.m0006 { background-image: url("../img/0060.png"); }
+    &.m0007 { background-image: url("../img/0070.png"); }
+    &.m0008 { background-image: url("../img/0080.png"); }
+    &.m0009 { background-image: url("../img/0090.png"); }
+    &.m0010 { background-image: url("../img/0100.png"); }
+    &.m0011 { background-image: url("../img/0110.png"); }
+    &.m0012 { background-image: url("../img/0120.png"); }
+    &.m0013 { background-image: url("../img/0130.png"); }
+    &.m0014 { background-image: url("../img/0140.png"); }
+    &.m0015 { background-image: url("../img/0150.png"); }
+    &.m0016 { background-image: url("../img/0160.png"); }
+    &.m0017 { background-image: url("../img/0170.png"); }
+    &.m0018 { background-image: url("../img/0180.png"); }
+    &.m0019 { background-image: url("../img/0190.png"); }
+    &.m0020 { background-image: url("../img/0200.png"); }
+    &.m0021 { background-image: url("../img/0210.png"); }
+    &.m0022 { background-image: url("../img/0220.png"); }
+    &.m0023 { background-image: url("../img/0230.png"); }
+    &.m0024 { background-image: url("../img/0240.png"); }
+    &.m0025 { background-image: url("../img/0250.png"); }
+    &.m0026 { background-image: url("../img/0260.png"); }
+    &.m0027 { background-image: url("../img/0270.png"); }
+    &.m0028 { background-image: url("../img/0280.png"); }
+    &.m0029 { background-image: url("../img/0290.png"); }
+    &.m0030 { background-image: url("../img/0300.png"); }
+    &.m0031 { background-image: url("../img/0310.png"); }
+    &.m0032 { background-image: url("../img/0320.png"); }
+    &.m0033 { background-image: url("../img/0330.png"); }
+    &.m0034 { background-image: url("../img/0340.png"); }
+    &.m0035 { background-image: url("../img/0350.png"); }
+    &.m0036 { background-image: url("../img/0380.png"); }
+    &.m0037 { background-image: url("../img/0390.png"); }
+    &.m0038 { background-image: url("../img/0400.png"); }
+    &.m0039 { background-image: url("../img/0410.png"); }
+    &.m0040 { background-image: url("../img/0420.png"); }
+    &.m0041 { background-image: url("../img/0430.png"); }
+    &.m0042 { background-image: url("../img/0440.png"); }
+    &.m0043 { background-image: url("../img/0450.png"); }
+    &.m0044 { background-image: url("../img/0460.png"); }
+    &.m0045 { background-image: url("../img/0470.png"); }
+    &.m0046 { background-image: url("../img/0480.png"); }
+    &.m0047 { background-image: url("../img/0490.png"); }
+    &.m0048 { background-image: url("../img/0500.png"); }
+    &.m0049 { background-image: url("../img/0510.png"); }
+    &.m0050 { background-image: url("../img/0520.png"); }
+    &.m0051 { background-image: url("../img/0530.png"); }
+    &.m0052 { background-image: url("../img/0540.png"); }
+    &.m0053 { background-image: url("../img/0550.png"); }
+    &.m0054 { background-image: url("../img/0560.png"); }
+    &.m0055 { background-image: url("../img/0570.png"); }
+    &.m0056 { background-image: url("../img/0580.png"); }
+    &.m0057 { background-image: url("../img/0590.png"); }
+    &.m0058 { background-image: url("../img/0600.png"); }
+    &.m0059 { background-image: url("../img/0610.png"); }
+    &.m0060 { background-image: url("../img/0620.png"); }
+    &.m0061 { background-image: url("../img/0630.png"); }
+    &.m0062 { background-image: url("../img/0640.png"); }
+    &.m0063 { background-image: url("../img/0650.png"); }
+    &.m0064 { background-image: url("../img/0660.png"); }
+    &.m0065 { background-image: url("../img/0670.png"); }
+    &.m0066 { background-image: url("../img/0370.png"); }
+    &.m0067 { background-image: url("../img/0710.png"); }
+    /* Aqours */
+    &.m1001 { background-image: url("../img/1010.png"); }
+    &.m1002 { background-image: url("../img/1020.png"); }
+    &.m1003 { background-image: url("../img/1030.png"); }
+    &.m1004 { background-image: url("../img/1040.png"); }
+    &.m1005 { background-image: url("../img/1050.png"); }
+    &.m1006 { background-image: url("../img/1060.png"); }
+    &.m1007 { background-image: url("../img/1070.png"); }
+    &.m1008 { background-image: url("../img/1080.png"); }
+    &.m1009 { background-image: url("../img/1090.png"); }
+    &.m1010 { background-image: url("../img/1100.png"); }
+    &.m1011 { background-image: url("../img/1110.png"); }
+    &.m1012 { background-image: url("../img/1120.png"); }
+    &.m1013 { background-image: url("../img/1150.png"); }
+    &.m1014 { background-image: url("../img/1160.png"); }
+    &.m1015 { background-image: url("../img/1170.png"); }
+    &.m1016 { background-image: url("../img/1200.png"); }
+    &.m1017 { background-image: url("../img/1210.png"); }
+    &.m1018 { background-image: url("../img/1220.png"); }
+    &.m1019 { background-image: url("../img/1230.png"); }
+    &.m1020 { background-image: url("../img/1240.png"); }
+    &.m1021 { background-image: url("../img/1250.png"); }
+    &.m1022 { background-image: url("../img/1260.png"); }
+    &.m1023 { background-image: url("../img/1280.png"); }
+    &.m1024 { background-image: url("../img/1290.png"); }
+    &.m1025 { background-image: url("../img/1300.png"); }
+    &.m1026 { background-image: url("../img/1270.png"); }
+}

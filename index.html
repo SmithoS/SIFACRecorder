@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>スクフェスAC　レコーダー</title>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+<link rel="shortcut icon" href="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+<link rel="stylesheet" href="./css/design.min.css" />
+<link rel="stylesheet" href="./css/cover.min.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+
+      
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js"></script>
+<script src="./logic/datas.js"></script>
+<script src="./logic/database.js"></script>
+<script src="./component/home.js"></script>
+<script src="./component/setting.js"></script>
+<script src="./component/aim.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="menu">
+        <router-link v-bind:to="{ name : 'home' }"><i class="fas fa-address-card"></i></router-link>
+        <router-link v-bind:to="{ name : 'aim' }"><i class="far fa-sticky-note"></i></router-link>
+        <router-link v-bind:to="{ name : 'setting' }"><i class="fas fa-cog"></i></router-link>
+    </div>
+    <router-view></router-view>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
