@@ -66,11 +66,7 @@ methods: {
         
         me.loading = false
         me.content = {
-            aim: me.getAim(),
-            textareastyle: {
-                lineHeight: "19px",
-                height: "38px"
-            }
+            aim: me.getAim()
         }
     },
     save() {
