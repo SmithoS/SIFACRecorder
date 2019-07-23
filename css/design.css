@@ -156,11 +156,11 @@ button.spin {
 }
 
 #home .filter input:checked + label .singer.ms {
-  background-color: #ff0000;
+  background-color: #e82e82;
 }
 
 #home .filter input:checked + label .singer.aq {
-  background-color: #0000ff;
+  background-color: #00a1e9;
 }
 
 #home .filter input:checked + label .type.ch {
