@@ -32,6 +32,12 @@ const info = {
                     <li><a href="https://members.lovelive-sifacns.jp/">スクフェスAC カスタマイズサイト</a></li>
                 </ul>
             </div>
+            <h2>このアプリについて</h2>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/SmithoS/SIFACRecorder">Github プロジェクトページ</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 `,
