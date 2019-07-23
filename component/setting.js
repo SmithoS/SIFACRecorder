@@ -2,7 +2,7 @@ const setting = {
     template: `
     <div id="setting">
         <div class="pageTitle">
-            <h1>setting</h1>
+            <h1>設定</h1>
         </div>
         <div v-if="loading">
             Loading...（・8・）
@@ -32,7 +32,7 @@ const setting = {
                     </dl>
                     <h3>目標</h3>
                     <dl>
-                        <dt>表示方法</dt>
+                        <dt>テキスト変換方法</dt>
                         <dd>
                             <select v-model="content.settings.aim.parse">
                                 <option value="txt">テキスト</option>
@@ -79,7 +79,7 @@ methods: {
     },
     updateSetting() {
         this.saveSettings(this.content.settings)
-        alert("save")
+        alert("保存しました")
     }
 }
 };

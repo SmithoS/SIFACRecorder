@@ -2,7 +2,7 @@ const aim = {
     template: `
     <div id="aim">
         <div class="pageTitle">
-            <h1>目標、雑記</h1>
+            <h1>目標</h1>
         </div>
         <div v-if="loading">
             Loading...（・8・）
@@ -16,6 +16,10 @@ const aim = {
             </div>
             <div>
                 <textarea v-model="content.aim.text" v-on:blur="save" v-bind:style="getTextboxStyle"></textarea>
+            </div>
+            <div>
+                上記テキストエリアに記載された内容を変換して表示します。<br />
+                変換方法については設定画面で指定してください。
             </div>
         </div>
     </div>
@@ -66,11 +70,7 @@ methods: {
         
         me.loading = false
         me.content = {
-            aim: me.getAim(),
-            textareastyle: {
-                lineHeight: "19px",
-                height: "38px"
-            }
+            aim: me.getAim()
         }
     },
     save() {

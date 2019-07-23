@@ -18,8 +18,8 @@ $SubmitButtonTextColor: #ffffff;
 
 
 //難易度の色
-$singerMs: #ff0000;
-$singerAq: #0000ff;
+$singerMs: #e82e82;
+$singerAq: #00a1e9;
 $TypeCh: #a84cdd;
 $TypeCo: #50c7bc;
 $TypeSw: #fa6791;
@@ -250,5 +250,18 @@ button {
 #setting {
     .saveLine {
         text-align: center;
+    }
+}
+#info {
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 5px;
+        border: 1px solid gray;
     }
 }

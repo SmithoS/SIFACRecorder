@@ -22,6 +22,7 @@
 <script src="./component/home.js"></script>
 <script src="./component/setting.js"></script>
 <script src="./component/aim.js"></script>
+<script src="./component/info.js"></script>
 
 </head>
 <body>
@@ -29,6 +30,7 @@
     <div id="menu">
         <router-link v-bind:to="{ name : 'home' }"><i class="fas fa-address-card"></i></router-link>
         <router-link v-bind:to="{ name : 'aim' }"><i class="far fa-sticky-note"></i></router-link>
+        <router-link v-bind:to="{ name : 'info' }"><i class="fas fa-info-circle"></i></router-link>
         <router-link v-bind:to="{ name : 'setting' }"><i class="fas fa-cog"></i></router-link>
     </div>
     <router-view></router-view>
