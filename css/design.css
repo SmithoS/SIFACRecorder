@@ -250,3 +250,17 @@ button.spin {
 #setting .saveLine {
   text-align: center;
 }
+
+#info h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#info table {
+  width: 100%;
+}
+
+#info th, #info td {
+  padding: 5px;
+  border: 1px solid gray;
+}

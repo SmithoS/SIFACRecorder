@@ -19,6 +19,11 @@ const routes = [
         path: "/setting",
         name: 'setting',
         component: setting
+    },
+    {
+        path: "/info",
+        name: 'info',
+        component: info
     }
 ];
 

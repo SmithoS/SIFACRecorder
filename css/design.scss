@@ -252,3 +252,16 @@ button {
         text-align: center;
     }
 }
+#info {
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 5px;
+        border: 1px solid gray;
+    }
+}
