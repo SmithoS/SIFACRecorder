@@ -24,12 +24,22 @@ const routes = [
         path: "/info",
         name: 'info',
         component: info
+    },
+    {
+        path: "/err",
+        name: 'err',
+        component: err
     }
 ];
 
 const router = new VueRouter({
     routes
 });
+
+Vue.config.errorHandler = (err, vm, info) => {
+    ErrorArray.pushError(err)
+    router.push("err")
+}
 
 new Vue({
     router

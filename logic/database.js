@@ -96,3 +96,15 @@ let MyCache = (() => {
         }
     }
 })()
+
+let ErrorArray = (() => {
+    let _ary = []
+    return {
+        pushError: (err) => {
+            _ary.push(err)
+        },
+        popError: () => {
+            return _ary.pop()
+        }
+    }
+})()
