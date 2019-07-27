@@ -88,15 +88,17 @@ const home = { template: `
             me.error = null
             me.content = null
 
-            me.content = {
-                musics: me.getMusics(),
-                achivements: me.getAchivements(),
-                filter: {
-                    singer: "ms",
-                    type: "ch"
-                }
-            } 
-            me.loading = false
+            me.getMusics().then((ms) => {
+                me.content = {
+                    musics: ms,
+                    achivements: me.getAchivements(),
+                    filter: {
+                        singer: "ms",
+                        type: "ch"
+                    }
+                } 
+                me.loading = false
+            })
         },
         getCellStyle(m) {
             const setting = this.getSettings().dTable
