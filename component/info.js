@@ -1,10 +1,18 @@
 const info = {
     template: `
-    <div id="info">
+    <div id="info" class="page">
         <div class="pageTitle">
             <h1>インフォメーション</h1>
         </div>
-        <div>
+        <div v-if="loading">
+            Loading...（・8・）
+        </div>
+        <div v-if="error">
+            エラー...（Ｘ8Ｘ）
+            {{ error.msg }}
+        </div>
+        <transition name="ct">
+        <div v-if="content">
             <h2>しおり マス数一覧</h2>
             <div>
                 <table>
@@ -39,6 +47,31 @@ const info = {
                 </ul>
             </div>
         </div>
+        </transition>
     </div>
 `,
+data() {
+    return {
+        loading: false,
+        error: null,
+        content: null
+    }
+},
+created () {
+    this.fetchData()
+},
+watch: {
+    '$route': 'fetchData'
+},
+methods: {
+    fetchData () {
+        const me = this
+        me.loading = true
+        me.error = null
+        me.content = null
+        
+        me.content = {}
+        me.loading = false
+    }
+}
 };

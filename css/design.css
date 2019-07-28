@@ -118,6 +118,36 @@ button.spin {
   border: 1px solid #ffffff;
 }
 
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.2s;
+}
+
+.v-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.v-enter-to {
+  opacity: 1;
+}
+
+.v-leave {
+  opacity: 1;
+}
+
+.v-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
 #home .filter {
   padding: 10px;
   text-align: center;
@@ -234,6 +264,131 @@ button.spin {
 
 #home .sampleNjap {
   color: #ffb7b7;
+}
+
+/* 楽曲リスト用アニメーション */
+.rowLvl.idx0 .dsp {
+  animation-delay: 0.0s;
+}
+
+.rowLvl.idx0 .levelMain {
+  animation-delay: 0.0s;
+}
+
+.rowLvl.idx1 .dsp {
+  animation-delay: 0.2s;
+}
+
+.rowLvl.idx1 .levelMain {
+  animation-delay: 0.2s;
+}
+
+.rowLvl.idx2 .dsp {
+  animation-delay: 0.4s;
+}
+
+.rowLvl.idx2 .levelMain {
+  animation-delay: 0.4s;
+}
+
+.rowLvl.idx3 .dsp {
+  animation-delay: 0.6s;
+}
+
+.rowLvl.idx3 .levelMain {
+  animation-delay: 0.6s;
+}
+
+.rowLvl.idx4 .dsp {
+  animation-delay: 0.8s;
+}
+
+.rowLvl.idx4 .levelMain {
+  animation-delay: 0.8s;
+}
+
+.rowLvl.idx5 .dsp {
+  animation-delay: 1.0s;
+}
+
+.rowLvl.idx5 .levelMain {
+  animation-delay: 1.0s;
+}
+
+.rowLvl.idx6 .dsp {
+  animation-delay: 1.2s;
+}
+
+.rowLvl.idx6 .levelMain {
+  animation-delay: 1.2s;
+}
+
+.rowLvl.idx7 .dsp {
+  animation-delay: 1.4s;
+}
+
+.rowLvl.idx7 .levelMain {
+  animation-delay: 1.4s;
+}
+
+.rowLvl.idx8 .dsp {
+  animation-delay: 1.6s;
+}
+
+.rowLvl.idx8 .levelMain {
+  animation-delay: 1.6s;
+}
+
+.rowLvl.idx9 .dsp {
+  animation-delay: 1.8s;
+}
+
+.rowLvl.idx9 .levelMain {
+  animation-delay: 1.8s;
+}
+
+.rowLvl.idx10 .dsp {
+  animation-delay: 2.0s;
+}
+
+.rowLvl.idx10 .levelMain {
+  animation-delay: 2.0s;
+}
+
+.rowLvl .dsp {
+  animation-name: movelistL;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+
+.rowLvl .levelMain {
+  animation-name: movelistR;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+
+@keyframes movelistL {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes movelistR {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 #aim .cm {

@@ -1,5 +1,5 @@
 const home = { template: `
-    <div id="home">
+    <div id="home" class="page">
         <div class="pageTitle">
             <h1>FC/AP表</h1>
         </div>
@@ -14,11 +14,11 @@ const home = { template: `
             <div class="filter">
                 <p>グループ</p>
                 <div class="candidate">
-                    <input type="radio" id="singerMs" value="ms" v-model="content.filter.singer" />
+                    <input type="radio" id="singerMs" value="ms" v-model="content.filter.singer" v-on:change="changeFilter" />
                     <label for="singerMs">
                         <b class="singer ms">μ’s</b>
                     </label>
-                    <input type="radio" id="singerAq" value="aq" v-model="content.filter.singer" />
+                    <input type="radio" id="singerAq" value="aq" v-model="content.filter.singer" v-on:change="changeFilter" />
                     <label for="singerAq">
                         <b class="singer aq">Aqours</b>
                     </label>
@@ -27,31 +27,32 @@ const home = { template: `
             <div class="filter">
                 <p>難易度</p>
                 <div class="candidate">
-                    <input type="radio" id="typrCh" value="ch" v-model="content.filter.type" />
+                    <input type="radio" id="typrCh" value="ch" v-model="content.filter.type" v-on:change="changeFilter" />
                     <label for="typrCh">
                         <b class="type ch">CHALLENGE</b>
                     </label>
-                    <input type="radio" id="typrSw" value="sw" v-model="content.filter.type" />
+                    <input type="radio" id="typrSw" value="sw" v-model="content.filter.type" v-on:change="changeFilter" />
                     <label for="typrSw">
                         <b class="type sw">SWITCH</b>
                     </label>
-                    <input type="radio" id="typrPs" value="pl" v-model="content.filter.type" />
+                    <input type="radio" id="typrPs" value="pl" v-model="content.filter.type" v-on:change="changeFilter" />
                     <label for="typrPs">
                         <b class="type pl">PLUS</b>
                     </label>
                 </div>
             </div>
-
             <div class="dTable">
-                <div class="rowLvl" v-for="lvl of getLevelList()">
+                <div class="rowLvl" v-for="(lvl, idx) of lvlList" v-bind:class="'idx' + idx">
                     <div class="dsp">
                         {{ lvl }}
                     </div>
                     <div class="levelMain">
-                        <p v-for="(music, index) in getMuscicsByLevel(lvl)" :key="index" class="music"
+                        <p v-for="music in getMuscicsByLevel(lvl)"
+                            class="music"
                             v-bind:style="getCellStyle(music)"
                             v-bind:class="getAchive(music)"
-                            v-on:click="toggleAchive(music)">
+                            v-on:click="toggleAchive(music)"
+                            :key="music.musicId + music.type">
                             {{ music.title }}
                         </p>
                     </div>
@@ -69,7 +70,8 @@ const home = { template: `
         return {
             loading: false,
             error: null,
-            content: null
+            content: null,
+            lvlList: []
         }
     },
     created () {
@@ -87,6 +89,7 @@ const home = { template: `
             me.loading = true
             me.error = null
             me.content = null
+            me.lvlList = []
 
             me.getMusics().then((ms) => {
                 me.content = {
@@ -98,8 +101,10 @@ const home = { template: `
                     }
                 } 
                 me.loading = false
+                me.lvlList = me.getLevelList()
             })
         },
+
         getCellStyle(m) {
             const setting = this.getSettings().dTable
             let rtn = {
@@ -163,6 +168,12 @@ const home = { template: `
                         && m.type == me.content.filter.type
                         && m.levelMain == lvl
             })
+        },
+        changeFilter() {
+            this.lvlList = []
+            setTimeout(() => {
+                this.lvlList = this.getLevelList()
+            }, 5)
         }
     }
 };

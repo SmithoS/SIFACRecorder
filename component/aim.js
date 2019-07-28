@@ -1,6 +1,6 @@
 const aim = {
     template: `
-    <div id="aim">
+    <div id="aim" class="page">
         <div class="pageTitle">
             <h1>目標</h1>
         </div>
@@ -67,11 +67,11 @@ methods: {
         me.loading = true
         me.error = null
         me.content = null
-        
-        me.loading = false
+
         me.content = {
             aim: me.getAim()
         }
+        me.loading = false
     },
     save() {
         this.saveAim(this.content.aim)
