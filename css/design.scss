@@ -123,8 +123,6 @@ button {
     }    
 }
 
-
-
 #menu {
     position: fixed;
     z-index: 1;
@@ -142,6 +140,31 @@ button {
         color: $FooterTextColor;
         border: 1px solid $FooterBorderColor;
     }
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.v-enter-active,
+.v-leave-active {
+    transition: all 0.2s;
+}
+.v-enter {
+    transform: translateX(100%);
+    opacity: 0;
+}
+.v-enter-to {
+    opacity: 1;
+}
+.v-leave {
+    opacity: 1;
+}
+.v-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 
@@ -236,6 +259,54 @@ button {
     .sampleAp {color: $AchAp;}
     .sampleNjap {color: $AchNjap;}
 }
+
+/* 楽曲リスト用アニメーション */
+.rowLvl.idx0 {.dsp {animation-delay: 0.0s;} .levelMain {animation-delay: 0.0s;}}
+.rowLvl.idx1 {.dsp {animation-delay: 0.2s;} .levelMain {animation-delay: 0.2s;}}
+.rowLvl.idx2 {.dsp {animation-delay: 0.4s;} .levelMain {animation-delay: 0.4s;}}
+.rowLvl.idx3 {.dsp {animation-delay: 0.6s;} .levelMain {animation-delay: 0.6s;}}
+.rowLvl.idx4 {.dsp {animation-delay: 0.8s;} .levelMain {animation-delay: 0.8s;}}
+.rowLvl.idx5 {.dsp {animation-delay: 1.0s;} .levelMain {animation-delay: 1.0s;}}
+.rowLvl.idx6 {.dsp {animation-delay: 1.2s;} .levelMain {animation-delay: 1.2s;}}
+.rowLvl.idx7 {.dsp {animation-delay: 1.4s;} .levelMain {animation-delay: 1.4s;}}
+.rowLvl.idx8 {.dsp {animation-delay: 1.6s;} .levelMain {animation-delay: 1.6s;}}
+.rowLvl.idx9 {.dsp {animation-delay: 1.8s;} .levelMain {animation-delay: 1.8s;}}
+.rowLvl.idx10{.dsp {animation-delay: 2.0s;} .levelMain {animation-delay: 2.0s;}}
+.rowLvl .dsp {
+    animation-name: movelistL;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+.rowLvl .levelMain {
+    animation-name: movelistR;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+
+
+@keyframes movelistL {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes movelistR {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 #aim {
     .cm {
         min-height: 200px;

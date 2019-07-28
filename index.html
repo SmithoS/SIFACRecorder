@@ -34,7 +34,9 @@
         <router-link v-bind:to="{ name : 'info' }"><i class="fas fa-info-circle"></i></router-link>
         <router-link v-bind:to="{ name : 'setting' }"><i class="fas fa-cog"></i></router-link>
     </div>
-    <router-view></router-view>
+    <transition>
+        <router-view />
+    </transition>
 </div>
 <script src="./main.js"></script>
 </body>

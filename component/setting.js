@@ -1,6 +1,6 @@
 const setting = {
     template: `
-    <div id="setting">
+    <div id="setting" class="page">
         <div class="pageTitle">
             <h1>設定</h1>
         </div>
@@ -72,10 +72,10 @@ methods: {
         me.error = null
         me.content = null
         
-        me.loading = false
         me.content = {
             settings: me.getSettings()
         }
+        me.loading = false
     },
     updateSetting() {
         this.saveSettings(this.content.settings)
