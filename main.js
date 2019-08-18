@@ -1,4 +1,5 @@
 Vue.mixin(logic_database);
+Vue.mixin(logic_init);
 
 const routes = [
     {

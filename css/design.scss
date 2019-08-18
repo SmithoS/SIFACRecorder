@@ -147,6 +147,7 @@ button {
     top: 0;
     left: 0;
     right: 0;
+    padding-bottom: 160px;
 }
 .v-enter-active,
 .v-leave-active {
@@ -334,5 +335,52 @@ button {
     th, td {
         padding: 5px;
         border: 1px solid gray;
+    }
+}
+
+// デザイン確認用
+#wrapper.slideNeso #kazari {
+    position: fixed;
+    bottom:35px;
+    right:5px;
+    display: inline-block;
+    width: 165px;
+    background-image: url("https://i.gyazo.com/322b356269a0aa3ded44af1c0c2402b3.png");
+    background-size:100% auto;
+    z-index: 100;
+    animation-name: slideNeso;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+}
+
+#wrapper.slideNeso {
+    &.rndm01 #kazari { height: 113.5px; background-position: 0px 0px; }
+    &.rndm02 #kazari { height: 113.5px; background-position: 0px -113.5px; }
+    &.rndm03 #kazari { height: 113.5px; background-position: 0px -227px; }
+    &.rndm04 #kazari { height: 113.5px; background-position: 0px -340.5px; }
+    &.rndm05 #kazari { height: 113.5px; background-position: 0px -454px; }
+    &.rndm06 #kazari { height: 113.5px; background-position: 0px -567.5px; }
+    &.rndm07 #kazari { height: 113.5px; background-position: 0px -681px; }
+    &.rndm08 #kazari { height: 113.5px; background-position: 0px -794.5px; }
+    &.rndm09 #kazari { height: 113.5px; background-position: 0px -908px; }
+    &.rndm10 #kazari { height:120px; background-position: 0px -1021.5px; }
+    &.rndm11 #kazari { height:120px; background-position: 0px -1141.5px; }
+    &.rndm12 #kazari { height:120px; background-position: 0px -1261.5px; }
+    &.rndm13 #kazari { height:120px; background-position: 0px -1381.5px; }
+    &.rndm14 #kazari { height:120px; background-position: 0px -1501.5px; }
+    &.rndm15 #kazari { height:120px; background-position: 0px -1621.5px; }
+    &.rndm16 #kazari { height:120px; background-position: 0px -1741.5px; }
+    &.rndm17 #kazari { height:120px; background-position: 0px -1861.5px; }
+    &.rndm18 #kazari { height:120px; background-position: 0px -1981.5px; }
+} 
+
+
+@keyframes slideNeso {
+    0% {
+        right: -330px;
+    }
+    100% {
+        right: 5px;
     }
 }

@@ -17,8 +17,8 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js"></script>
-<script src="./logic/datas.js"></script>
 <script src="./logic/database.js"></script>
+<script src="./logic/init.js"></script>
 <script src="./component/home.js"></script>
 <script src="./component/setting.js"></script>
 <script src="./component/aim.js"></script>
@@ -34,6 +34,7 @@
         <router-link v-bind:to="{ name : 'info' }"><i class="fas fa-info-circle"></i></router-link>
         <router-link v-bind:to="{ name : 'setting' }"><i class="fas fa-cog"></i></router-link>
     </div>
+    <div id="kazari"></div>
     <transition>
         <router-view />
     </transition>
