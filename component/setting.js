@@ -44,6 +44,14 @@ const setting = {
                             </p>
                         </dd>
                     </dl>
+                    <h3>装飾</h3>
+                    <dl>
+                        <dt>寝そべり</dt>
+                        <dd>
+                            <input type="checkbox" id="chkNeso" v-model="content.settings.deco.neso">
+                            <label for="chkNeso">表示する</label>
+                        </dd>
+                    </dl>
                 </div>
                 <div class="saveLine">
                     <button class="ok" v-on:click="updateSetting">保存</button>

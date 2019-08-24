@@ -12,18 +12,21 @@ const logic_database = {
             if (val != null) {
                 rtn = JSON.parse(val)
             } else {
-                rtn = {
-                    dTable: {
-                        rows: 10,
-                        height: 60,
-                        fontSize: 8
-                    },
-                    aim: {
-                        parse: "txt"
-                    }
-                }
+                rtn = {}
             }
-            return rtn
+            return Complement(rtn, {
+                dTable: {
+                    rows: 10,
+                    height: 60,
+                    fontSize: 8
+                },
+                aim: {
+                    parse: "txt"
+                },
+                deco: {
+                    neso: false
+                }
+            })
         },
         saveSettings(val) {
             if (val != null) {
@@ -108,3 +111,10 @@ let ErrorArray = (() => {
         }
     }
 })()
+
+function Complement(a, b) {
+    Object.keys(b).forEach((key) => {
+        a[key] = (key in a) ? ((typeof a[key] === "object" && typeof b[key] === "object") ? Complement(a[key], b[key]) : a[key]) : b[key];
+    })
+    return a
+}
